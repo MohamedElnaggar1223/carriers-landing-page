@@ -1,11 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getSession } from "@/lib/session";
-import LogoutBtn from "./LogoutBtn";
 import MobileMenu from "./MobileMenu";
 
 export default async function Header() {
-    const session = await getSession()
 
     return (
         <header className='flex items-center justify-between w-full absolute top-0 px-2 lg:px-12 gap-4 py-4 text-white z-20'>
@@ -17,10 +14,10 @@ export default async function Header() {
                 className='ml-2'
             />
             <div className='flex items-center gap-12 justify-between max-md:hidden'>
-                {!session && <Link href='/'>Home</Link>}
-                {!session && <Link href='/?tab=services'>Services</Link>}
-                {/* {!session && <Link href='/coach-sign-up'>Become a coach</Link>}
-                {!session && <Link href='/player-sign-up'>Become a player</Link>} */}
+                <Link href='/'>Home</Link>
+                <Link href='/?tab=services'>Services</Link>
+                {/* <Link href='/coach-sign-up'>Become a coach</Link>}
+                <Link href='/player-sign-up'>Become a player</Link>} */}
             </div>
             <div className='flex w-1'></div>
             {/* <div className="flex gap-4">
@@ -28,7 +25,7 @@ export default async function Header() {
                 {session && <LogoutBtn />}
             </div> */}
             <div className='md:hidden'>
-                {!session && <MobileMenu />}
+                <MobileMenu />
             </div>
         </header>
     )

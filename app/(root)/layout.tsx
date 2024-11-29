@@ -3,7 +3,6 @@ import "../globals.css";
 import Header from "@/components/shared/Header";
 import { Outfit, Denk_One, DM_Sans, Mulish, Baloo_Bhaina_2 } from 'next/font/google'
 import Footer from "@/components/shared/Footer";
-import { getSession } from "@/lib/session";
 import AuthProvider from "@/providers/SessionProvider";
 
 export const metadata: Metadata = {
@@ -47,25 +46,18 @@ const mulish = Mulish({
 
 export default async function RootLayout({
   children,
-  player,
-  coach
 }: Readonly<{
   children: React.ReactNode;
-  player: React.ReactNode;
-  coach: React.ReactNode;
 }>) {
-  const session = await getSession()
-
   return (
     <html lang="en">
       <body
         className={`antialiased bg-[#191919] ${outfit.className} ${dmSans.variable} ${denkOne.variable} ${mulish.variable} ${baloo.variable}`}
       >
         <AuthProvider>
-          {!session?.user && <Header />}
+          <Header />
           {children}
-          {session?.user?.role === 'player' ? player : session?.user?.role === 'coach' ? coach : null}
-          {!session?.user && <Footer />}
+          <Footer />
         </AuthProvider>
       </body>
     </html>
