@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Hero() 
-{
-    return (
-        <section className="flex max-lg:pt-24 lg:pl-24 pl-8 items-center relative min-h-screen w-full text-white max-lg:flex-col gap-12">
+export default function Hero() {
+	return (
+		<section className="flex max-lg:pt-24 lg:pl-24 pl-8 items-center relative min-h-screen w-full text-white max-lg:flex-col gap-12">
 			<div className="flex flex-col gap-4 py-12 lg:gap-12 flex-1 max-lg:w-full">
 				<Image
 					src="/images/logo.svg"
@@ -16,7 +16,9 @@ export default function Hero()
 					We are making the champions of tomorrow.
 				</h1>
 				<p className='font-thin text-base lg:text-lg'>Join us to become the greatest carrier of all time.</p>
-				<button className='border-2 border-main-red bg-transparent text-main-red w-[206px] h-[60px] text-center font-bold text-lg rounded-full max-md:mx-auto md:ml-[10vw]'>Join us</button>
+				<Link href='/join-us'>
+					<button className='border-2 border-main-red bg-transparent text-main-red w-[206px] h-[60px] text-center font-bold text-lg rounded-full max-md:mx-auto md:ml-[10vw]'>Join us</button>
+				</Link>
 			</div>
 			{/* <div className="flex relative flex-1 items-center justify-end lg:h-[85vh] lg:max-h-[46rem] max-lg:w-full">
 				<div className='relative lg:max-h-[85vh]'>
@@ -41,5 +43,5 @@ export default function Hero()
 				</div>
 			</div>
 		</section>
-    )
+	)
 }
