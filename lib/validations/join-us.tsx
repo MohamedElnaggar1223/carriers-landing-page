@@ -16,6 +16,9 @@ export const joinUsSchema = z.object({
     role: z.enum(["player", "coach"], {
         required_error: "Please select a role",
     }),
+    gameName: z.string().min(1, {
+        message: "Game name is required",
+    }),
     isPartOfTeam: z.boolean(),
     teamName: z.string().optional(),
 })

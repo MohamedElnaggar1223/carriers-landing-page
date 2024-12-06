@@ -7,6 +7,7 @@ interface IJoinUs extends Document {
     phoneNumber: string;
     role: 'player' | 'coach';
     isPartOfTeam: boolean;
+    gameName: string;
     teamName?: string;
 }
 
@@ -37,6 +38,10 @@ const joinUsSchema = new Schema<IJoinUs>({
     },
     isPartOfTeam: {
         type: Boolean,
+        required: true
+    },
+    gameName: {
+        type: String,
         required: true
     },
     teamName: {

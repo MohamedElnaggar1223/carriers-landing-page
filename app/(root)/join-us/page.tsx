@@ -27,6 +27,7 @@ export default function JoinUsForm() {
             role: 'player',
             isPartOfTeam: false,
             teamName: '',
+            gameName: '',
         },
     })
 
@@ -56,7 +57,7 @@ export default function JoinUsForm() {
         return (
             <div className='flex flex-col items-center justify-center gap-8 flex-1 h-screen'>
                 <Image
-                    src="/images/logoCarriers.png"
+                    src="/images/logo.svg"
                     alt="Carriers Logo"
                     width={500}
                     height={100}
@@ -78,7 +79,7 @@ export default function JoinUsForm() {
         <section className='flex max-w-screen relative bg-[#191919] gap-4 lg:pl-24 max-lg:pl-4 pr-4 coachGradient overflow-x-hidden'>
             <div className='flex flex-col gap-12 top-0 sticky h-screen items-start justify-center flex-1 max-lg:hidden'>
                 <Image
-                    src="/images/logoCarriers.png"
+                    src="/images/logo.svg"
                     alt="Carriers Logo"
                     width={129}
                     height={36}
@@ -90,19 +91,19 @@ export default function JoinUsForm() {
                     Be the first to try Carriers. Fill out the form now for early access!
                 </h2>
             </div>
-            <div className='flex flex-col items-center justify-center gap-8 flex-1 w-full mx-auto py-8'>
+            <div className='flex flex-col items-center justify-center gap-8 flex-1 w-full mx-auto py-16'>
                 <div className='lg:hidden flex flex-col gap-6 items-center justify-center w-full'>
-                    <Image
-                        src="/images/logoCarriers.png"
+                    {/* <Image
+                        src="/images/logo.svg"
                         alt="Carriers Logo"
                         width={129}
                         height={36}
-                    />
-                    <h1 className='text-white text-center text-7xl font-bold'>
-                        Attach your team information and we will co6ntact you soon!
+                    /> */}
+                    <h1 className='text-white text-center text-4xl font-bold'>
+                        Carriers is almost here!
                     </h1>
                     <h2 className='text-[#8D8D99] text-center text-xl font-normal'>
-                        It takes only 2 minutes
+                        Be the first to try Carriers. Fill out the form now for early access!
                     </h2>
                 </div>
 
@@ -145,7 +146,7 @@ export default function JoinUsForm() {
                             )}
                         />
 
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 max-lg:flex-col">
                             <FormField
                                 control={form.control}
                                 name="countryCode"
@@ -195,6 +196,28 @@ export default function JoinUsForm() {
                                 )}
                             />
                         </div>
+
+                        <FormField
+                            control={form.control}
+                            name="gameName"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel className="text-white">Game Name</FormLabel>
+                                    <FormControl>
+                                        <select
+                                            {...field}
+                                            className="w-full rounded-lg border border-white bg-white outline-none p-3 text-black"
+                                        >
+                                            <option value='' disabled>Select a game</option>
+                                            <option value="Valorant">Valorant</option>
+                                            <option value="League of Legends">League of Legends</option>
+                                            <option value="Overwatch">Overwatch</option>
+                                        </select>
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
 
                         <FormField
                             control={form.control}
