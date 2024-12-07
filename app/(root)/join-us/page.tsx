@@ -63,7 +63,7 @@ export default function JoinUsForm() {
                     height={100}
                 />
                 <div className='flex flex-col items-center justify-center gap-4 text-center'>
-                    <h2 className='text-white text-7xl font-bold'>You're in!<br /> Stay tuned for Carriers updates.</h2>
+                    <h2 className='text-white text-7xl font-bold max-md:text-3xl'>You're in!<br /> Stay tuned for Carriers updates.</h2>
                 </div>
                 <button
                     onClick={() => router.push('/')}
