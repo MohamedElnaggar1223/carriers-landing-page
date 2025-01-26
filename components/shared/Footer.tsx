@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer()
-{
+export default function Footer() {
     return (
         <footer className='flex max-md:flex-col w-full px-8 lg:px-36 relative overflow-hidden'>
             <div className='flex flex-col flex-1 gap-8 items-start justify-between py-8'>
@@ -13,12 +12,12 @@ export default function Footer()
                     </div>
                     <div className='flex gap-4 flex-col'>
                         <p className='font-medium text-lg text-white'>Language</p>
-                        <select defaultValue='en' className='bg-transparent border-x-0 border-t-0 border-b border-white text-[#F5FFE6] text-base py-2 min-w-[184px]'> 
+                        <select defaultValue='en' className='bg-transparent border-x-0 border-t-0 border-b border-white text-[#F5FFE6] text-base py-2 min-w-[184px]'>
                             <option value='en'>English</option>
                         </select>
                     </div>
                 </div>
-                <p className='font-light text-white text-sm'>© 2024. All rights reserved.</p>
+                <p className='font-light text-white text-sm'>© 2025. All rights reserved.</p>
             </div>
             <div className='flex justify-between items-center p-6 gap-4 flex-1 divide-x divide-[#FA373730] bg-[#484D431A] relative z-10 bg-opacity-20 backdrop-blur-lg'>
                 <div className='flex flex-col items-start gap-4 flex-1 justify-start h-full'>
@@ -41,7 +40,7 @@ export default function Footer()
                                 src='/images/ig.svg'
                                 width={24}
                                 height={24}
-                                alt='ig' 
+                                alt='ig'
                             />
                             Instagram
                         </Link>
@@ -50,7 +49,7 @@ export default function Footer()
                                 src='/images/twitter.svg'
                                 width={24}
                                 height={24}
-                                alt='twitter' 
+                                alt='twitter'
                             />
                             Twitter
                         </Link>
