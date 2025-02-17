@@ -1,3 +1,5 @@
+import AgentTest from "@/components/LandingPage/AgentTest";
+import Analytics from "@/components/LandingPage/Analytics";
 import GamesCarousel from "@/components/LandingPage/GamesCarousel";
 import Hero from "@/components/LandingPage/Hero";
 import OurServices from "@/components/LandingPage/OurServices";
@@ -9,8 +11,10 @@ export default async function Home({ searchParams }: { searchParams: { [key: str
 	return (
 		<>
 			<Hero />
-			<GamesCarousel />
-			<OurServices tab={tab} />
+			{/* <GamesCarousel /> */}
+			<AgentTest />
+			{/* <OurServices tab={tab} /> */}
+			<Analytics />
 		</>
 	);
 }

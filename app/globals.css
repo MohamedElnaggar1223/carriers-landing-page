@@ -14,6 +14,11 @@
   cursor: pointer;
 }
 
+.radial {
+  background-color: hsl(0, 0%, 10%);
+  background-image: radial-gradient(circle farthest-side at center, hsla(0, 71%, 32%, 0.329) 0%, hsl(0, 0%, 10%) 100%);;
+}
+
 .custom-radio:checked {
   border-color: #FA3737;
 }

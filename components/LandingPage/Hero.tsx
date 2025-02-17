@@ -3,21 +3,23 @@ import Link from "next/link";
 
 export default function Hero() {
 	return (
-		<section className="flex max-lg:pt-24 lg:pl-24 pl-8 items-center relative min-h-screen w-full text-white max-lg:flex-col gap-12">
-			<div className="flex flex-col gap-4 py-12 lg:gap-12 flex-1 max-lg:w-full">
+		<section className="flex items-center relative min-h-screen w-full text-white">
+			<div className="flex flex-col gap-4 py-12 flex-1 max-lg:w-full items-center justify-center">
 				<Image
 					src="/images/logo.svg"
 					alt="Carriers Logo"
 					width={487}
 					height={125}
-					className="md:ml-6 max-lg:w-[320px]"
+					className="max-lg:w-[320px]"
 				/>
-				<h1 className='text-2xl lg:text-5xl font-normal text-white'>
-					We are making the champions of tomorrow.
+				<h1 className='text-2xl lg:text-5xl font-normal text-white max-w-[470px] 2xl:max-w-[680px]'>
+					We are making the champions of tomorrow by turning aspirations into reality.
 				</h1>
-				<p className='font-thin text-base lg:text-lg'>Join us to become the greatest carrier of all time.</p>
-				<Link href='/join-us'>
-					<button className='border-2 border-main-red bg-transparent text-main-red w-[206px] h-[60px] text-center font-bold text-lg rounded-full max-md:mx-auto md:ml-[10vw]'>Join us</button>
+				<p className='font-thin text-base lg:text-lg max-w-[470px] 2xl:max-w-[680px]'>
+					Join us to become the greatest carrier of all time. Strive for excellence and achieve greatness.
+				</p>
+				<Link className='mt-12' href='/join-us'>
+					<button className='border-2 border-main-red bg-transparent text-main-red w-[206px] h-[60px] text-center font-bold text-lg rounded-full'>Join us</button>
 				</Link>
 			</div>
 			{/* <div className="flex relative flex-1 items-center justify-end lg:h-[85vh] lg:max-h-[46rem] max-lg:w-full">
@@ -31,7 +33,7 @@ export default function Hero() {
 					/>
 				</div>
 			</div> */}
-			<div className="flex-1 flex max-h-[80vh] h-screen justify-end items-end max-lg:hidden overflow-hidden">
+			{/* <div className="flex-1 flex max-h-[80vh] h-screen justify-end items-end max-lg:hidden overflow-hidden">
 				<div className="relative w-full h-full">
 					<Image
 						src="/images/LaptopComplete.png"
@@ -41,7 +43,7 @@ export default function Hero() {
 						objectPosition="right bottom"
 					/>
 				</div>
-			</div>
+			</div> */}
 		</section>
 	)
 }
