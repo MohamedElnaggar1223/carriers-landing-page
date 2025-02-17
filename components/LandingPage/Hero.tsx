@@ -12,10 +12,10 @@ export default function Hero() {
 					height={125}
 					className="max-lg:w-[320px]"
 				/>
-				<h1 className='text-2xl lg:text-5xl font-normal text-white max-w-[470px] 2xl:max-w-[680px]'>
+				<h1 className='text-2xl lg:text-5xl font-normal text-white max-w-[360px] md:max-w-[470px] 2xl:max-w-[680px]'>
 					We are making the champions of tomorrow by turning aspirations into reality.
 				</h1>
-				<p className='font-thin text-base lg:text-lg max-w-[470px] 2xl:max-w-[680px]'>
+				<p className='font-thin text-base lg:text-lg max-w-[360px] md:max-w-[470px] 2xl:max-w-[680px]'>
 					Join us to become the greatest carrier of all time. Strive for excellence and achieve greatness.
 				</p>
 				<Link className='mt-12' href='/join-us'>
