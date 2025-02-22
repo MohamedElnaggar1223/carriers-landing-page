@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Analytics() {
     return (
-        <section className='h-max overflow-y-hidden my-20 w-full relative grid grid-cols-2 items-center max-w-[100vw] overflow-x-hidden max-md:px-4'>            <div className='blur-lg z-[-1] radial w-[720px] h-[720px] rounded-full overflow-hidden absolute -left-[11%] -top-[5%]' />
+        <section className='h-max overflow-y-hidden my-16 w-full relative grid grid-cols-2 items-center max-w-[100vw] overflow-x-hidden max-md:px-4'>            <div className='blur-lg z-[-1] radial w-[720px] h-[720px] rounded-full overflow-hidden absolute -left-[11%] -top-[5%]' />
             <div className='blur-lg z-[-1] radial w-[1240px] h-[1240px] rounded-full overflow-hidden absolute -right-[25%] -top-[5%]' />
             <div className='rounded-3xl bg-[#53545E]/25 flex md:mx-6 flex-col px-4 py-4 md:px-8 md:py-12 gap-4 md:gap-20 max-h-[140px] md:max-h-[480px] h-screen w-screen col-span-1'>                <div className='flex flex-col gap-4'>
                 <p className='text-white text-base xl:text-7xl font-bold'>Free Analytics!</p>
@@ -24,7 +24,7 @@ export default function Analytics() {
                 </div>
                 <div className="relative w-full h-full md:hidden">
                     <Image
-                        src="/images/laptop-complete.png"
+                        src="/images/phone.png"
                         alt="Carriers Laptop"
                         fill
                         objectFit="contain"
