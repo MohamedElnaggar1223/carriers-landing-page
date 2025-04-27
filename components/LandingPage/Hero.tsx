@@ -12,13 +12,13 @@ export default function Hero() {
 					height={125}
 					className="max-lg:w-[320px]"
 				/>
-				<h1 className='text-2xl z-[99999] py-2 lg:text-6xl font-normal max-w-[360px] md:max-w-[470px] 2xl:max-w-[680px] gradient-text'>
+				<h1 className='text-2xl z-[99999] text-center py-2 lg:text-6xl font-normal max-w-[360px] md:max-w-[470px] 2xl:max-w-[680px] gradient-text'>
 					نصنع أبطال الغد
 				</h1>
-				<h1 className='text-2xl lg:text-6xl font-normal text-white max-w-[360px] md:max-w-[470px] 2xl:max-w-[680px]'>
+				<h1 className='text-2xl lg:text-6xl font-normal text-center text-white max-w-[360px] md:max-w-[470px] 2xl:max-w-[680px]'>
 					بتحويل الطموحات إلى واقع!
 				</h1>
-				<p className='font-thin text-base lg:text-lg max-w-[360px] md:max-w-[470px] 2xl:max-w-[680px]'>
+				<p className='font-thin text-base lg:text-lg text-center max-w-[360px] md:max-w-[470px] 2xl:max-w-[680px]'>
 					انضم إلينا لبدء رحلة الإحتراف الأن!
 				</p>
 				<Link className='mt-12' href='/join-us'>

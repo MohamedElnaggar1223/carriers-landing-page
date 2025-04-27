@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { createJoinUsEntry } from "@/lib/actions/join-us.actions"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { ChevronDown, Loader2 } from "lucide-react"
+import { Check, ChevronDown, Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { countryCodes } from '@/constants'
@@ -55,15 +55,16 @@ export default function JoinUsForm() {
 
     if (showSuccess) {
         return (
-            <div className='flex flex-col items-center justify-center gap-8 flex-1 h-screen'>
-                <Image
+            <div dir="rtl" className='flex flex-col items-center justify-center gap-8 flex-1 h-screen'>
+                {/* <Image
                     src="/images/logo.svg"
                     alt="Carriers Logo"
                     width={500}
                     height={100}
-                />
+                /> */}
+                <Check className="text-green-500" size={100} />
                 <div className='flex flex-col items-center justify-center gap-4 text-center'>
-                    <h2 className='text-white text-7xl font-bold max-md:text-3xl'>تم التسجيل بنجاح!<br /> ترقب تحديثات كاريرز.</h2>
+                    <h2 className='text-white text-7xl font-bold max-md:text-3xl'>تم التسجيل بنجاح!<br /> نحن سعداء بانضمامك إلى Carriers.</h2>
                 </div>
                 <button
                     onClick={() => router.push('/')}
@@ -85,7 +86,7 @@ export default function JoinUsForm() {
                     height={36}
                 />
                 <h1 className='text-white text-left text-7xl font-bold'>
-                    كاريرز قادم قريبا!
+                    كاريرز علي وشك الانطلاق!
                 </h1>
                 <h2 className='text-[#8D8D99] text-left text-6xl font-normal'>
                     كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر!
@@ -99,10 +100,10 @@ export default function JoinUsForm() {
                         width={129}
                         height={36}
                     /> */}
-                    <h1 className='text-white text-center text-4xl font-bold'>
-                        كاريرز قادم قريبا!
+                    <h1 dir="rtl" className='text-white text-center text-4xl font-bold'>
+                        كاريرز علي وشك الانطلاق!
                     </h1>
-                    <h2 className='text-[#8D8D99] text-center text-xl font-normal'>
+                    <h2 dir="rtl" className='text-[#8D8D99] text-center text-xl font-normal'>
                         كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر!
                     </h2>
                 </div>
