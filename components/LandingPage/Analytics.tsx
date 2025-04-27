@@ -8,7 +8,7 @@ export default function Analytics() {
                 <p className='text-white text-base xl:text-7xl font-bold'>تحليل اداء مجاني!</p>
                 <p className='text-white text-sm xl:text-[40px] xl:leading-[48px] font-normal'>اكتشف إحصائياتك </p>
             </div>
-                <button className='bg-[#F13C3C] min-w-[100px] lg:min-w-[200px] drop-shadow-[0px_4px_4px_rgba(251,63,63,0.5)] text-white text-xs md:text-[24px] font-bold px-4 md:px-6 py-2 md:py-2 w-fit rounded-full'>
+                <button className='bg-[#F13C3C] min-w-[100px] lg:min-w-[200px] drop-shadow-[0px_4px_4px_rgba(251,63,63,0.5)] text-white text-xs md:text-[24px] font-bold px-4 md:px-6 py-1 md:py-2 w-fit rounded-full'>
                     ابدأ الآن!
                 </button>
             </div>

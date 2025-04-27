@@ -109,7 +109,7 @@ export default function JoinUsForm() {
                 </div>
 
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-6 w-full max-w-xl bg-[#2C2B2B] p-8 rounded-lg'>
+                    <form dir="rtl" onSubmit={form.handleSubmit(onSubmit)} className='flex flex-col gap-6 w-full max-w-xl bg-[#2C2B2B] p-8 rounded-lg'>
                         <FormField
                             control={form.control}
                             name="fullName"
@@ -159,6 +159,7 @@ export default function JoinUsForm() {
                                                 <select
                                                     {...field}
                                                     className="w-full rounded-lg border border-white bg-white p-3 text-black appearance-none"
+                                                    dir="ltr"
                                                 >
                                                     <option value="" className="bg-[#191919] text-white" disabled>رمز الدولة</option>
                                                     {countryCodes.map((country, index) => (
