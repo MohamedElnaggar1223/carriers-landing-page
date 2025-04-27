@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className='flex flex-col gap-8 items-start'>
                     <div className="flex flex-col gap-0.5">
                         <p className='font-baloo text-3xl text-white font-bold'>Carriers</p>
-                        <p className='max-w-[496px] font-light text-white'>Carry your team with us! Get expert analysis, personalized clip reviews, and the latest match updates. Level up now!</p>
+                        <p className='max-w-[496px] font-light text-white'>اختبر شخصيتك مجانًا لاكتشاف عميلك المثالي، واحصل على تحليل مجاني لمهاراتك.ابدأ رحلتك نحو الاحتراف الآن!</p>
                     </div>
                     <div className='flex gap-4 flex-col'>
                         <p className='font-medium text-lg text-white'>Language</p>

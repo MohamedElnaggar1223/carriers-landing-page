@@ -55,6 +55,14 @@
 background: linear-gradient(0deg, rgba(0,0,0,0.9612219887955182) 30%, rgba(0,0,0,0) 80%);
 }
 
+.gradient-text {
+  background: linear-gradient(0deg, rgba(255, 0, 4, 0), #FA3737),
+              linear-gradient(90deg, rgba(255, 0, 4, 0) 31.73%, rgba(255, 255, 255, 0.5) 58.65%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

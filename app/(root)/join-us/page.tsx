@@ -63,13 +63,13 @@ export default function JoinUsForm() {
                     height={100}
                 />
                 <div className='flex flex-col items-center justify-center gap-4 text-center'>
-                    <h2 className='text-white text-7xl font-bold max-md:text-3xl'>You're in!<br /> Stay tuned for Carriers updates.</h2>
+                    <h2 className='text-white text-7xl font-bold max-md:text-3xl'>تم التسجيل بنجاح!<br /> ترقب تحديثات كاريرز.</h2>
                 </div>
                 <button
                     onClick={() => router.push('/')}
                     className='text-white bg-[#FF3B30] w-48 h-14 rounded-full'
                 >
-                    Go to Home
+                    الذهاب إلى الصفحة الرئيسية
                 </button>
             </div>
         )
@@ -85,10 +85,10 @@ export default function JoinUsForm() {
                     height={36}
                 />
                 <h1 className='text-white text-left text-7xl font-bold'>
-                    Carriers is almost here!
+                    كاريرز قادم قريبا!
                 </h1>
                 <h2 className='text-[#8D8D99] text-left text-6xl font-normal'>
-                    Be the first to try Carriers. Fill out the form now for early access!
+                    كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر!
                 </h2>
             </div>
             <div className='flex flex-col items-center justify-center gap-8 flex-1 w-full mx-auto py-16'>
@@ -100,10 +100,10 @@ export default function JoinUsForm() {
                         height={36}
                     /> */}
                     <h1 className='text-white text-center text-4xl font-bold'>
-                        Carriers is almost here!
+                        كاريرز قادم قريبا!
                     </h1>
                     <h2 className='text-[#8D8D99] text-center text-xl font-normal'>
-                        Be the first to try Carriers. Fill out the form now for early access!
+                        كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر!
                     </h2>
                 </div>
 
@@ -114,12 +114,12 @@ export default function JoinUsForm() {
                             name="fullName"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-white">Full Name</FormLabel>
+                                    <FormLabel className="text-white">الاسم الكامل</FormLabel>
                                     <FormControl>
                                         <input
                                             {...field}
                                             className="w-full rounded-lg border border-white bg-white outline-none p-3 text-black"
-                                            placeholder="Enter your full name"
+                                            placeholder="أدخل اسمك الكامل"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -132,13 +132,13 @@ export default function JoinUsForm() {
                             name="email"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-white">Email</FormLabel>
+                                    <FormLabel className="text-white">البريد الإلكتروني</FormLabel>
                                     <FormControl>
                                         <input
                                             {...field}
                                             type="email"
                                             className="w-full rounded-lg border border-white bg-white outline-none p-3 text-black"
-                                            placeholder="Enter your email"
+                                            placeholder="أدخل بريدك الإلكتروني"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -152,14 +152,14 @@ export default function JoinUsForm() {
                                 name="countryCode"
                                 render={({ field }) => (
                                     <FormItem className="flex-1">
-                                        <FormLabel className="text-white">Country Code</FormLabel>
+                                        <FormLabel className="text-white">رمز الدولة</FormLabel>
                                         <FormControl>
                                             <div className="relative">
                                                 <select
                                                     {...field}
                                                     className="w-full rounded-lg border border-white bg-white p-3 text-black appearance-none"
                                                 >
-                                                    <option value="" className="bg-[#191919] text-white" disabled>Country Code</option>
+                                                    <option value="" className="bg-[#191919] text-white" disabled>رمز الدولة</option>
                                                     {countryCodes.map((country, index) => (
                                                         <option
                                                             key={index}
@@ -183,12 +183,12 @@ export default function JoinUsForm() {
                                 name="phoneNumber"
                                 render={({ field }) => (
                                     <FormItem className="flex-[2]">
-                                        <FormLabel className="text-white">Phone Number</FormLabel>
+                                        <FormLabel className="text-white">رقم الهاتف</FormLabel>
                                         <FormControl>
                                             <input
                                                 {...field}
                                                 className="w-full rounded-lg border border-white bg-white outline-none p-3 text-black"
-                                                placeholder="Enter your phone number"
+                                                placeholder="أدخل رقم هاتفك"
                                             />
                                         </FormControl>
                                         <FormMessage />
@@ -202,16 +202,16 @@ export default function JoinUsForm() {
                             name="gameName"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-white">Game Name</FormLabel>
+                                    <FormLabel className="text-white">اسم اللعبة</FormLabel>
                                     <FormControl>
                                         <select
                                             {...field}
                                             className="w-full rounded-lg border border-white bg-white outline-none p-3 text-black"
                                         >
-                                            <option value='' disabled>Select a game</option>
-                                            <option value="Valorant">Valorant</option>
-                                            <option value="League of Legends">League of Legends</option>
-                                            <option value="Overwatch">Overwatch</option>
+                                            <option value='' disabled>اختر لعبة</option>
+                                            <option value="Valorant">فالورانت</option>
+                                            <option value="League of Legends">ليج أوف ليجيندز</option>
+                                            <option value="Overwatch">أوفرواتش</option>
                                         </select>
                                     </FormControl>
                                     <FormMessage />
@@ -224,7 +224,7 @@ export default function JoinUsForm() {
                             name="role"
                             render={({ field }) => (
                                 <FormItem className="space-y-3">
-                                    <FormLabel className="text-white">Are you a player or coach?</FormLabel>
+                                    <FormLabel className="text-white">هل أنت لاعب أم مدرب؟</FormLabel>
                                     <FormControl>
                                         <div className="flex gap-4">
                                             <label className="flex items-center gap-2">
@@ -235,7 +235,7 @@ export default function JoinUsForm() {
                                                     checked={field.value === 'player'}
                                                     className="custom-radio"
                                                 />
-                                                <span className="text-white">Player</span>
+                                                <span className="text-white">لاعب</span>
                                             </label>
                                             <label className="flex items-center gap-2">
                                                 <input
@@ -245,7 +245,7 @@ export default function JoinUsForm() {
                                                     checked={field.value === 'coach'}
                                                     className="custom-radio"
                                                 />
-                                                <span className="text-white">Coach</span>
+                                                <span className="text-white">مدرب</span>
                                             </label>
                                         </div>
                                     </FormControl>
@@ -259,7 +259,7 @@ export default function JoinUsForm() {
                             name="isPartOfTeam"
                             render={({ field }) => (
                                 <FormItem className="space-y-3">
-                                    <FormLabel className="text-white">Are you currently part of team or organization?</FormLabel>
+                                    <FormLabel className="text-white">هل أنت حاليًا جزء من فريق أو منظمة؟</FormLabel>
                                     <FormControl>
                                         <div className="flex gap-4">
                                             <label className="flex items-center gap-2">
@@ -269,7 +269,7 @@ export default function JoinUsForm() {
                                                     onChange={() => form.setValue('isPartOfTeam', true)}
                                                     className="custom-radio"
                                                 />
-                                                <span className="text-white">Yes</span>
+                                                <span className="text-white">نعم</span>
                                             </label>
                                             <label className="flex items-center gap-2">
                                                 <input
@@ -281,7 +281,7 @@ export default function JoinUsForm() {
                                                     }}
                                                     className="custom-radio"
                                                 />
-                                                <span className="text-white">No</span>
+                                                <span className="text-white">لا</span>
                                             </label>
                                         </div>
                                     </FormControl>
@@ -296,12 +296,12 @@ export default function JoinUsForm() {
                                 name="teamName"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel className="text-white">Team/Organization's Name</FormLabel>
+                                        <FormLabel className="text-white">اسم الفريق/المنظمة</FormLabel>
                                         <FormControl>
                                             <input
                                                 {...field}
                                                 className="w-full border-t-0 border-x-0 bg-transparent border-b border-white outline-none p-3 text-white"
-                                                placeholder="Enter team name"
+                                                placeholder="أدخل اسم الفريق"
                                             />
                                         </FormControl>
                                         <FormMessage />
@@ -316,7 +316,7 @@ export default function JoinUsForm() {
                             type='submit'
                         >
                             {loading && <Loader2 className='animate-spin' size={24} color="#fff" />}
-                            Submit Application
+                            إرسال الطلب
                         </button>
                     </form>
                 </Form>
