@@ -35,7 +35,7 @@ const games = [
     { id: "Apex Legends", label: "أبيكس ليجندز" },
     { id: 'Call of Duty', label: 'كول أوف دوتي' },
     { id: 'Fortnite', label: 'فورتنايت' },
-    { id: 'PUBG', label: 'بابجي' },
+    { id: 'PUBG', label: 'ببجي' },
     // Add more games as needed
 ]
 
