@@ -7,7 +7,13 @@ export default function Footer() {
             <div dir='rtl' className='flex flex-col flex-1 gap-8 items-start pr-4 justify-between py-8'>
                 <div className='flex flex-col gap-8 items-start'>
                     <div className="flex flex-col gap-0.5">
-                        <p className='font-baloo text-3xl text-white font-bold'>Carriers</p>
+                        <Image
+                            src='/images/logo.svg'
+                            alt='Carriers Logo'
+                            width={122}
+                            height={30}
+                            className='ml-2 col-span-1'
+                        />
                         <p className='max-w-[496px] font-light text-white'>اختبر شخصيتك مجانًا لاكتشاف عميلك المثالي، واحصل على تحليل مجاني لمهاراتك.ابدأ رحلتك نحو الاحتراف الآن!</p>
                     </div>
                     <div className='flex gap-4 flex-col'>

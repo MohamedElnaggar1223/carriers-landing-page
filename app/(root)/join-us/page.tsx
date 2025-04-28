@@ -110,7 +110,7 @@ export default function JoinUsForm() {
     }
 
     return (
-        <section className='flex max-w-screen relative bg-[#191919] gap-4 lg:pl-24 max-lg:pl-4 pr-4 coachGradient overflow-x-hidden'>
+        <section className='flex max-w-screen relative bg-[#191919] gap-4 lg:pl-24 max-lg:pl-4 pr-4 coachGradient overflow-x-hidden pb-6'>
             <div className='flex flex-col gap-12 top-0 sticky h-screen items-start justify-center flex-1 max-lg:hidden'>
                 <Image
                     src="/images/logo.svg"
