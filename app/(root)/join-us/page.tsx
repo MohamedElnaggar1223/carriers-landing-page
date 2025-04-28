@@ -119,10 +119,10 @@ export default function JoinUsForm() {
                     height={36}
                 />
                 <h1 className='text-white text-left text-7xl font-bold'>
-                    كاريرز علي وشك الانطلاق!
+                    !كاريرز على وشك الانطلاق
                 </h1>
                 <h2 className='text-[#8D8D99] text-left text-6xl font-normal'>
-                    كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر!
+                    كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر
                 </h2>
             </div>
             <div className='flex flex-col items-center justify-center gap-8 flex-1 w-full mx-auto py-16'>
@@ -134,10 +134,10 @@ export default function JoinUsForm() {
                         height={36}
                     /> */}
                     <h1 dir="rtl" className='text-white text-center text-4xl font-bold'>
-                        كاريرز علي وشك الانطلاق!
+                    !كاريرز على وشك الانطلاق
                     </h1>
                     <h2 dir="rtl" className='text-[#8D8D99] text-center text-xl font-normal'>
-                        كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر!
+                        كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر
                     </h2>
                 </div>
 
