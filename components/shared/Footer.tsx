@@ -4,20 +4,20 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className='flex max-md:flex-col w-full px-8 lg:px-36 relative overflow-hidden'>
-            <div className='flex flex-col flex-1 gap-8 items-start justify-between py-8'>
+            <div dir='rtl' className='flex flex-col flex-1 gap-8 items-start pr-4 justify-between py-8'>
                 <div className='flex flex-col gap-8 items-start'>
                     <div className="flex flex-col gap-0.5">
                         <p className='font-baloo text-3xl text-white font-bold'>Carriers</p>
                         <p className='max-w-[496px] font-light text-white'>اختبر شخصيتك مجانًا لاكتشاف عميلك المثالي، واحصل على تحليل مجاني لمهاراتك.ابدأ رحلتك نحو الاحتراف الآن!</p>
                     </div>
                     <div className='flex gap-4 flex-col'>
-                        <p className='font-medium text-lg text-white'>Language</p>
+                        <p className='font-medium text-lg text-white'>اللغة</p>
                         <select defaultValue='en' className='bg-transparent border-x-0 border-t-0 border-b border-white text-[#F5FFE6] text-base py-2 min-w-[184px]'>
-                            <option value='en'>English</option>
+                            <option value='ar'>العربية</option>
                         </select>
                     </div>
                 </div>
-                <p className='font-light text-white text-sm'>© 2025. All rights reserved.</p>
+                <p className='font-light text-white text-sm'>© 2025. جميع الحقوق محفوظة.</p>
             </div>
             <div className='flex justify-between items-center p-6 gap-4 flex-1 divide-x divide-[#FA373730] bg-[#484D431A] relative z-10 bg-opacity-20 backdrop-blur-lg'>
                 <div className='flex flex-col items-start gap-4 flex-1 justify-start h-full'>

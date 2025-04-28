@@ -2,22 +2,22 @@ import { z } from "zod"
 
 export const joinUsSchema = z.object({
     fullName: z.string().min(1, {
-        message: "Full name is required",
+        message: "الاسم الكامل مطلوب",
     }),
     email: z.string().email({
-        message: "Invalid email address",
+        message: "عنوان البريد الإلكتروني غير صالح",
     }),
     countryCode: z.string().min(1, {
-        message: "Country code is required",
+        message: "رمز الدولة مطلوب",
     }),
     phoneNumber: z.string().min(1, {
-        message: "Phone number is required",
+        message: "رقم الهاتف مطلوب",
     }),
     role: z.enum(["player", "coach"], {
-        required_error: "Please select a role",
+        required_error: "يرجى تحديد دور",
     }),
     gameName: z.string().min(1, {
-        message: "Game name is required",
+        message: "اسم اللعبة مطلوب",
     }),
     isPartOfTeam: z.boolean(),
     teamName: z.string().optional(),

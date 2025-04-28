@@ -22,7 +22,7 @@ export default function JoinUsForm() {
         defaultValues: {
             fullName: '',
             email: '',
-            countryCode: '',
+            countryCode: '+966',
             phoneNumber: '',
             role: 'player',
             isPartOfTeam: false,
