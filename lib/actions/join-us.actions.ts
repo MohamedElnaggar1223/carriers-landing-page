@@ -7,11 +7,11 @@ import { z } from "zod"
 
 export const createJoinUsEntry = async (data: { fullName: string, email: string, countryCode: string, phoneNumber: string, role: string, isPartOfTeam: boolean, teamName?: string, gameName: string }) => {
     if (!data.fullName || !data.email || !data.countryCode || !data.phoneNumber || !data.role) {
-        return { error: 'Please fill all required fields' }
+        return { error: 'الرجاء تعبئة جميع الحقول المطلوبة' }
     }
 
     if (data.isPartOfTeam && !data.teamName) {
-        return { error: 'Team name is required when part of a team' }
+        return { error: 'اسم الفريق مطلوب عند الانضمام إلى فريق' }
     }
 
     try {
@@ -19,12 +19,12 @@ export const createJoinUsEntry = async (data: { fullName: string, email: string,
 
         const existingUser = await User.findOne({ email: data.email })
         if (existingUser) {
-            return { error: 'Email already registered' }
+            return { error: 'البريد الإلكتروني مسجل بالفعل' }
         }
 
         const existingJoinUs = await JoinUs.findOne({ email: data.email })
         if (existingJoinUs) {
-            return { error: 'Application already submitted with this email' }
+            return { error: 'تم تقديم طلب بالفعل باستخدام هذا البريد الإلكتروني' }
         }
 
         const newJoinUs = new JoinUs(data)
