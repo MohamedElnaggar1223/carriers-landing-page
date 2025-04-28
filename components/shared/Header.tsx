@@ -14,8 +14,8 @@ export default async function Header() {
                 className='ml-2 col-span-1'
             />
             <div className='flex items-center gap-12 justify-center max-md:hidden col-span-1'>
-                <Link href='/'>Home</Link>
-                <Link href='/?tab=services'>Services</Link>
+                <Link href='/?tab=services'>الخدمات</Link>
+                <Link href='/'>الرئيسية</Link>
                 {/* <Link href='/coach-sign-up'>Become a coach</Link>}
                 <Link href='/player-sign-up'>Become a player</Link>} */}
             </div>

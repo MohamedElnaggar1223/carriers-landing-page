@@ -10,9 +10,13 @@ export const joinUsSchema = z.object({
     countryCode: z.string().min(1, {
         message: "رمز الدولة مطلوب",
     }),
-    phoneNumber: z.string().min(1, {
-        message: "رقم الهاتف مطلوب",
+
+    phoneNumber: z
+    .string()
+    .regex(/^[0-9]+$/, {
+      message: "رقم الهاتف يجب أن يحتوي على أرقام فقط",
     }),
+    
     role: z.enum(["player", "coach"], {
         required_error: "يرجى تحديد دور",
     }),
