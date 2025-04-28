@@ -20,8 +20,8 @@ export default function MobileMenu() {
                 {open ? <X /> : <Menu />}
             </PopoverTrigger>
             <PopoverContent className='w-screen p-0 flex flex-col rounded-none divide-y divide-gray-200 bg-white'>
-                <Link className='py-4 px-2' href='/'>Home</Link>
-                <Link className='py-4 px-2' href='/?tab=services'>Services</Link>
+                <Link className='py-4 px-2' href='/'>الرئيسية</Link>
+                <Link className='py-4 px-2' href='/?tab=services'>الخدمات</Link>
                 {/* <Link className='py-4 px-2' href='/coach-sign-up'>Become a coach</Link>
                 <Link className='py-4 px-2' href='/player-sign-up'>Become a player</Link> */}
             </PopoverContent>
