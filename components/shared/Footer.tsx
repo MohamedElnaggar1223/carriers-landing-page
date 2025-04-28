@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className='flex flex-col gap-8 items-start'>
                     <div className="flex flex-col gap-0.5">
                         <p className='font-baloo text-3xl text-white font-bold'>Carriers</p>
-                        <p className='max-w-[496px] font-light text-white'>اختبر شخصيتك مجانًا لاكتشاف عميلك المثالي، واحصل على تحليل مجاني لمهاراتك.ابدأ رحلتك نحو الاحتراف الآن!</p>
+                        <p className='max-w-[496px] font-light text-white'>اختبر شخصيتك مجانًا لاكتشاف عميلك المثالي، واحصل على تحليل مجاني لمهاراتك.ابدأ رحلتك نحو الاحتراف الآن</p>
                     </div>
                     <div className='flex gap-4 flex-col'>
                         <p className='font-medium text-lg text-white'>اللغة</p>
@@ -35,7 +35,7 @@ export default function Footer() {
                             />
                             Twitch
                         </Link> */}
-                        <Link href='https://www.instagram.com/carriers.sa?igsh=OWpxb21ieWtzY3Vt&utm_source=qr' target='_blank' className='text-white flex gap-4 items-center justify-center text-center'>
+                        <Link href='https://www.instagram.com/carriers_gg?igsh=OWpxb21ieWtzY3Vt&utm_source=qr' target='_blank' className='text-white flex gap-4 items-center justify-center text-center'>
                             <Image
                                 src='/images/ig.svg'
                                 width={24}
@@ -44,7 +44,7 @@ export default function Footer() {
                             />
                             Instagram
                         </Link>
-                        <Link href='https://x.com/Carriers_sa' target='_blank' className='text-white flex gap-4 items-center justify-center text-center'>
+                        <Link href='https://x.com/carriers_gg' target='_blank' className='text-white flex gap-4 items-center justify-center text-center'>
                             <Image
                                 src='/images/twitter.svg'
                                 width={24}
