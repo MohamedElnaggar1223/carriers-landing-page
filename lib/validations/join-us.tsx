@@ -16,8 +16,8 @@ export const joinUsSchema = z.object({
     role: z.enum(["player", "coach"], {
         required_error: "يرجى تحديد دور",
     }),
-    gameName: z.string().min(1, {
-        message: "اسم اللعبة مطلوب",
+    gameName: z.array(z.string()).min(1, {
+        message: "يجب اختيار لعبة واحدة على الأقل",
     }),
     isPartOfTeam: z.boolean(),
     teamName: z.string().optional(),

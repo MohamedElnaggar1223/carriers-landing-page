@@ -5,7 +5,7 @@ import User from "@/models/User"
 import { joinUsSchema } from "../validations/join-us"
 import { z } from "zod"
 
-export const createJoinUsEntry = async (data: z.infer<typeof joinUsSchema>) => {
+export const createJoinUsEntry = async (data: { fullName: string, email: string, countryCode: string, phoneNumber: string, role: string, isPartOfTeam: boolean, teamName?: string, gameName: string }) => {
     if (!data.fullName || !data.email || !data.countryCode || !data.phoneNumber || !data.role) {
         return { error: 'Please fill all required fields' }
     }

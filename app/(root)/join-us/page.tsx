@@ -11,10 +11,37 @@ import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { countryCodes } from '@/constants'
 import { joinUsSchema } from "@/lib/validations/join-us"
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import {
+    Command,
+    CommandEmpty,
+    CommandGroup,
+    CommandInput,
+    CommandItem,
+    CommandList,
+} from "@/components/ui/command"
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
+import { Checkbox } from "@/components/ui/checkbox"
+
+const games = [
+    { id: "Valorant", label: "فالورانت" },
+    { id: "League of Legends", label: "ليج أوف ليجيندز" },
+    { id: "Overwatch", label: "أوفرواتش" },
+    { id: "Apex Legends", label: "أبيكس ليجندز" },
+    { id: 'Call of Duty', label: 'كول أوف دوتي' },
+    { id: 'Fortnite', label: 'فورتنايت' },
+    // Add more games as needed
+]
 
 export default function JoinUsForm() {
     const [loading, setLoading] = useState(false)
     const [showSuccess, setShowSuccess] = useState(false)
+    const [openGameSelect, setOpenGameSelect] = useState(false)
     const router = useRouter()
 
     const form = useForm<z.infer<typeof joinUsSchema>>({
@@ -27,12 +54,18 @@ export default function JoinUsForm() {
             role: 'player',
             isPartOfTeam: false,
             teamName: '',
-            gameName: '',
+            gameName: [],
         },
     })
 
     async function onSubmit(values: z.infer<typeof joinUsSchema>) {
         setLoading(true)
+
+        const gameNamesString = values.gameName.join(", ");
+        const submissionData = {
+            ...values,
+            gameName: gameNamesString,
+        };
 
         try {
             if (values.isPartOfTeam && values.teamName === '') {
@@ -41,7 +74,7 @@ export default function JoinUsForm() {
                 return
             }
 
-            const result = await createJoinUsEntry(values)
+            const result = await createJoinUsEntry(submissionData)
             if (result.error) {
                 form.setError('email', { message: result.error })
             } else {
@@ -203,19 +236,66 @@ export default function JoinUsForm() {
                             control={form.control}
                             name="gameName"
                             render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel className="text-white">اسم اللعبة</FormLabel>
-                                    <FormControl>
-                                        <select
-                                            {...field}
-                                            className="w-full rounded-lg border border-white bg-white outline-none p-3 text-black"
-                                        >
-                                            <option value='' disabled>اختر لعبة</option>
-                                            <option value="Valorant">فالورانت</option>
-                                            <option value="League of Legends">ليج أوف ليجيندز</option>
-                                            <option value="Overwatch">أوفرواتش</option>
-                                        </select>
-                                    </FormControl>
+                                <FormItem className="flex flex-col">
+                                    <FormLabel className="text-white">الألعاب التي تلعبها</FormLabel>
+                                    <Popover open={openGameSelect} onOpenChange={setOpenGameSelect}>
+                                        <PopoverTrigger asChild>
+                                            <FormControl>
+                                                <Button
+                                                    variant="outline"
+                                                    role="combobox"
+                                                    aria-expanded={openGameSelect}
+                                                    className={cn(
+                                                        "w-full justify-between bg-white text-black hover:bg-gray-100 hover:text-black",
+                                                        !field.value?.length && "text-muted-foreground"
+                                                    )}
+                                                >
+                                                    {field.value?.length
+                                                        ? field.value
+                                                            .map(gameId => games.find(g => g.id === gameId)?.label)
+                                                            .filter(Boolean)
+                                                            .join(", ")
+                                                        : "اختر الألعاب"}
+                                                    <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                                                </Button>
+                                            </FormControl>
+                                        </PopoverTrigger>
+                                        <PopoverContent className="w-[--radix-popover-trigger-width] max-h-[--radix-popover-content-available-height] p-0">
+                                            <Command>
+                                                <CommandInput placeholder="ابحث عن لعبة..." />
+                                                <CommandList>
+                                                    <CommandEmpty>لم يتم العثور على لعبة.</CommandEmpty>
+                                                    <CommandGroup>
+                                                        {games.map((game) => (
+                                                            <CommandItem
+                                                                key={game.id}
+                                                                value={game.id}
+                                                                onSelect={(currentValue) => {
+                                                                    const selectedGames = field.value || [];
+                                                                    const index = selectedGames.indexOf(game.id);
+                                                                    let newSelectedGames = [];
+                                                                    if (index > -1) {
+                                                                        newSelectedGames = selectedGames.filter((_, i) => i !== index);
+                                                                    } else {
+                                                                        newSelectedGames = [...selectedGames, game.id];
+                                                                    }
+                                                                    field.onChange(newSelectedGames);
+                                                                }}
+                                                            >
+                                                                <Check
+                                                                    className={cn(
+                                                                        "mr-2 h-4 w-4",
+                                                                        field.value?.includes(game.id) ? "opacity-100" : "opacity-0"
+                                                                    )}
+                                                                />
+                                                                {game.label}
+                                                            </CommandItem>
+                                                        ))}
+                                                    </CommandGroup>
+                                                </CommandList>
+                                            </Command>
+                                        </PopoverContent>
+                                    </Popover>
                                     <FormMessage />
                                 </FormItem>
                             )}
