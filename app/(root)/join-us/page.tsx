@@ -35,6 +35,7 @@ const games = [
     { id: "Apex Legends", label: "أبيكس ليجندز" },
     { id: 'Call of Duty', label: 'كول أوف دوتي' },
     { id: 'Fortnite', label: 'فورتنايت' },
+    { id: 'PUBG', label: 'بابجي' },
     // Add more games as needed
 ]
 
@@ -134,7 +135,7 @@ export default function JoinUsForm() {
                         height={36}
                     /> */}
                     <h1 dir="rtl" className='text-white text-center text-4xl font-bold'>
-                    كاريرز علي وشك الانطلاق!
+                        كاريرز علي وشك الانطلاق!
                     </h1>
                     <h2 dir="rtl" className='text-[#8D8D99] text-center text-xl font-normal'>
                         كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر
