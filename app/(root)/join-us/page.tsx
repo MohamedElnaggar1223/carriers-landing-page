@@ -133,8 +133,8 @@ export default function JoinUsForm() {
                         width={129}
                         height={36}
                     /> */}
-                    <h1  className='text-white text-center text-4xl font-bold'>
-                    !كاريرز على وشك الانطلاق
+                    <h1 dir="rtl" className='text-white text-center text-4xl font-bold'>
+                    كاريرز علي وشك الانطلاق!
                     </h1>
                     <h2 dir="rtl" className='text-[#8D8D99] text-center text-xl font-normal'>
                         كن أول من يجرب كاريرز. املأ النموذج الآن للحصول على وصول مبكر
