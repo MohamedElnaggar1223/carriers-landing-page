@@ -1,3 +1,4 @@
+import Link from "next/dist/client/link";
 import Image from "next/image";
 
 export default function AgentTest() {
@@ -10,9 +11,11 @@ export default function AgentTest() {
                     <p className='text-white max-md:text-wrap max-md:max-w-[50%] text-base xl:text-5xl font-bold'>اختبار مجاني لتحديد عميلك!</p>
                     <p className='text-white text-sm xl:text-[40px] xl:leading-[48px] font-normal'>اكتشف شخصيتك </p>
                 </div>
-                <button className='bg-[#F13C3C] drop-shadow-[0px_4px_4px_rgba(251,63,63,0.5)] min-w-[100px] lg:min-w-[200px] text-white text-xs md:text-[24px] font-bold px-4 md:px-6 py-1 md:py-2 w-fit rounded-full'>
-                    ابدأ الآن!
-                </button>
+                <Link href="https://carriers.vercel.app/agent-test">
+                    <button className='bg-[#F13C3C] drop-shadow-[0px_4px_4px_rgba(251,63,63,0.5)] min-w-[100px] lg:min-w-[200px] text-white text-xs md:text-[24px] font-bold px-4 md:px-6 py-1 md:py-2 w-fit rounded-full'>
+                        ابدأ الآن!
+                    </button>
+                </Link>
             </div>
             <div className='grid grid-cols-4 gap-y-2'>
                 <div className="relative col-span-1 min-h-[60px] md:min-h-[211px]">
