@@ -403,7 +403,7 @@ export default function JoinUsForm() {
                                 name="suggestions"
                                 render={({ field }) => (
                                     <FormItem>
-                                    <FormLabel className="text-white">ادخل اقتراحاتك</FormLabel>
+                                    <FormLabel className="text-white">هل لديك أي اقتراحات؟</FormLabel>
                                     <FormControl>
                                         <input
                                         {...field}
