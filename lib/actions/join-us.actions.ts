@@ -6,7 +6,7 @@ import axios from 'axios';
 import { joinUsSchema } from "../validations/join-us"
 import { z } from "zod"
 
-export const createJoinUsEntry = async (data: { fullName: string, email: string, countryCode: string, phoneNumber: string, role: string, isPartOfTeam: boolean, teamName?: string, gameName: string }) => {
+export const createJoinUsEntry = async (data: { fullName: string, email: string, countryCode: string, phoneNumber: string, role: string, isPartOfTeam: boolean, teamName?: string, gameName: string, suggestions?: string }) => {
     if (!data.fullName || !data.email || !data.countryCode || !data.phoneNumber || !data.role) {
         return { error: 'الرجاء تعبئة جميع الحقول المطلوبة' }
     }
@@ -76,6 +76,15 @@ export const createJoinUsEntry = async (data: { fullName: string, email: string,
                     : []),
                 ],
               },
+              ...(data.suggestions
+                ? [{
+                    type: "section",
+                    text: {
+                      type: "mrkdwn",
+                      text: `*Suggestions:*\n${data.suggestions}`,
+                    },
+                  }]
+                : []),          
             ],
           });
 

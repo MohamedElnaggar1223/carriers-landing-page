@@ -25,4 +25,5 @@ export const joinUsSchema = z.object({
     }),
     isPartOfTeam: z.boolean(),
     teamName: z.string().optional(),
+    suggestions: z.string().optional(),
 })

@@ -9,6 +9,7 @@ interface IJoinUs extends Document {
     isPartOfTeam: boolean;
     gameName: string;
     teamName?: string;
+    suggestions?: string;
 }
 
 interface IJoinUsModel extends Model<IJoinUs> { }
@@ -47,7 +48,10 @@ const joinUsSchema = new Schema<IJoinUs>({
     teamName: {
         type: String,
         required: false
-    }
+    },
+    suggestions: { 
+        type: String,
+         required: false }
 });
 
 const JoinUs = (mongoose?.models?.JoinUs as IJoinUsModel) || mongoose.model<IJoinUs>('JoinUs', joinUsSchema);

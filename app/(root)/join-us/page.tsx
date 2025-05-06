@@ -60,6 +60,7 @@ export default function JoinUsForm() {
             isPartOfTeam: false,
             teamName: '',
             gameName: [],
+            suggestions: '',
         },
     })
 
@@ -397,7 +398,23 @@ export default function JoinUsForm() {
                                     )}
                                 />
                             )}
-
+                                <FormField
+                                control={form.control}
+                                name="suggestions"
+                                render={({ field }) => (
+                                    <FormItem>
+                                    <FormLabel className="text-white">ادخل اقتراحاتك</FormLabel>
+                                    <FormControl>
+                                        <input
+                                        {...field}
+                                        className="w-full border-t-0 border-x-0 bg-transparent border-b border-white outline-none p-3 text-white"
+                                        placeholder="اكتب اقتراحك"
+                                        />
+                                    </FormControl>
+                                    <FormMessage />
+                                    </FormItem>
+                                )}
+                                />
                             <button
                                 disabled={loading}
                                 className='text-white mx-auto bg-[#FF3B30] disabled:opacity-60 w-full h-14 rounded-full mt-6 flex items-center justify-center gap-2'
